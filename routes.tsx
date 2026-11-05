@@ -1,1 +1,17 @@
-//? config de navegacao entre telas
+//? config de navegacao entre telas[INSERIR ARQUIVOS DO FRONTEND AQUI]
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./Home";
+
+export default function Routes() {
+    const Stack = createNativeStackNavigator();
+
+    return(
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='Home'>
+                <Stack.Screen name="Home" component={Home}/>
+                    
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
+}
